@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <title>UYKU</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
 </head>
 <body>
   <div class="container fullpage">
@@ -11,5 +13,34 @@
     <p>Böyle bir seçenek kabul edilemez hemen geri dön e tıkla 💖</p>
     <a href="index.html"><button>← Geri Dön</button></a>
   </div>
+  <script>
+  // Trigger multiple bursts
+  function launchFireworks() {
+    const duration = 2 * 1000;
+    const end = Date.now() + duration;
+
+    (function frame() {
+      confetti({
+        particleCount: 6,
+        angle: 60,
+        spread: 55,
+        origin: { x: 0 },
+      });
+      confetti({
+        particleCount: 6,
+        angle: 120,
+        spread: 55,
+        origin: { x: 1 },
+      });
+
+      if (Date.now() < end) {
+        requestAnimationFrame(frame);
+      }
+    })();
+  }
+
+  window.onload = launchFireworks;
+</script>
+
 </body>
 </html>
