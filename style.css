@@ -1,21 +1,25 @@
-body {
+html, body {
+  height: 100%;
+  margin: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #ffe0ec, #ffe7f0);
+}
+
+.fullpage {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
   text-align: center;
-  padding: 50px;
 }
 
 .container {
   background: white;
-  padding: 40px;
+  padding: 30px;
   border-radius: 20px;
-  display: inline-block;
   box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
-  animation: fadeIn 1s ease;
-}
-
-h1 {
-  color: #ff1493;
 }
 
 button {
@@ -27,22 +31,10 @@ button {
   background-color: #ff69b4;
   color: white;
   cursor: pointer;
-  transition: background-color 0.3s, transform 0.2s;
+  transition: 0.3s;
 }
 
 button:hover {
   background-color: #ff1493;
   transform: scale(1.05);
-}
-
-#result {
-  margin-top: 30px;
-  font-size: 22px;
-  color: #c71585;
-  font-weight: bold;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
 }

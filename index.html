@@ -2,25 +2,21 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
-  <title>Buluşma Günü Seç 💖</title>
+  <title>Ne Yapalım?</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="container fullpage">
     <h1>💖 Bugün Ne Yapalım? 💖</h1>
-    <p>Haydi aşkım, bugünkü dateimiz için bir şey seç:</p>
+    <p>Birini seç aşkım:</p>
 
     <div id="activities">
-      <button onclick="selectActivity('Film Gecesi 🎬')">Film Gecesi</button>
-      <button onclick="selectActivity('CS takılmacası 🌳')">Piknik</button>
-      <button onclick="selectActivity('Kahve Keyfi ☕')">Kahve Keyfi</button>
-      <button onclick="selectActivity('Uyumak ✨')">Yıldızları İzleyelim</button>
-      <button onclick="selectActivity('İnsta date 🍝')">Yeni Restoran</button>
+      <a href="film.html"><button>Film Gecesi 🎬</button></a>
+      <a href="cs.html"><button>CS takılmacası</button></a>
+      <a href="kahve.html"><button>Kahve Keyfi ☕</button></a>
+      <a href="uyku.html"><button>Uyuyalım</button></a>
+      <a href="insta.html"><button>Insta Date</button></a>
     </div>
-
-    <p id="result"></p>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
