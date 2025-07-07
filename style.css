@@ -1,8 +1,9 @@
 html, body {
-  height: 100%;
   margin: 0;
+  padding: 0;
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(to right, #ffe0ec, #ffe7f0);
+  height: 100%;
 }
 
 .fullpage {
@@ -11,30 +12,61 @@ html, body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 40px;
+  padding: 30px 15px;
   text-align: center;
 }
 
 .container {
   background: white;
-  padding: 30px;
-  border-radius: 20px;
+  padding: 25px;
+  border-radius: 16px;
   box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+  max-width: 90%;
+  width: 100%;
+}
+
+h1 {
+  color: #ff1493;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 25px;
 }
 
 button {
   margin: 10px;
-  padding: 15px 30px;
-  font-size: 18px;
+  padding: 14px 24px;
+  font-size: 16px;
   border: none;
-  border-radius: 12px;
+  border-radius: 10px;
   background-color: #ff69b4;
   color: white;
   cursor: pointer;
   transition: 0.3s;
+  width: 100%;
+  max-width: 280px;
 }
 
 button:hover {
   background-color: #ff1493;
   transform: scale(1.05);
+}
+
+/* For very small screens */
+@media screen and (max-width: 400px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 15px;
+    padding: 12px 20px;
+  }
 }
